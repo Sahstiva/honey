@@ -20,26 +20,25 @@
   }
 
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 70px;
+    grid-column-gap: 70px;
+
+    @include breakpoint-1024 {
+      grid-template-columns: 1fr 1fr;
+    }
 
     @include breakpoint-800 {
+      display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
     }
   }
 
   &__item {
-    width: 330px;
-    height: 340px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0 50px 0;
-    margin: 0 0 68px 0;
-
+  
     &-gray {
       background-color: $color-lightgray;
       color: $color-graytext;
@@ -81,4 +80,17 @@
     max-width: 250px;
     text-align: center;
   }
+}
+
+// Переопределение стандартных стилей bootstrap
+.card-body {
+  padding: 0 0 125px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  max-width: 330px;
+  min-height: 407px;
 }

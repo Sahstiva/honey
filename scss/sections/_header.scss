@@ -91,13 +91,7 @@
     &-button {
       width: 230px;
       height: 92px;
-      background-color: $color-red;
-      color: $color-white;
       @include font(26px, 36px, 700);
-      border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 
