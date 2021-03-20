@@ -1,0 +1,45 @@
+.footer {
+  background-color: $header-background;
+
+  &__wrapper {
+    @include flex-center-space-between;
+    padding: 38px 0 57px 0;
+
+    @include breakpoint-600 {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    color: $color-icons;
+    border: solid 2px $color-icons;
+    border-radius: 22.5px;
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    @include flex-center;
+    margin: 0 0 0 55px;
+
+    &:hover {
+      color: $color-lightgray;
+      border-color: $color-lightgray;
+      cursor: pointer;
+    }
+
+    @include breakpoint-600 {
+      margin: 0;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+
+      @include breakpoint-600 {
+        margin: 40px 0 0 0;
+        justify-content: space-between;
+        width: 40%;
+      }
+    }
+  }
+}

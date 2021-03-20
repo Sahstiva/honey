@@ -1,0 +1,79 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 146px 0 139px 0;
+
+  &__header {
+    @include font(43px, 32px, 500);
+    color: $color-darktext;
+    margin: 0 0 213px 0;
+
+    @include breakpoint-600 {
+      @include font(32px, 25px, 500);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include breakpoint-1024 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    width: 330px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 50px 0;
+    margin: 0 0 68px 0;
+
+    &-gray {
+      background-color: $color-lightgray;
+      color: $color-graytext;
+    }
+
+    &-green {
+      background-color: $color-lightgreen;
+      color: $color-green;
+    }
+  }
+  &__heading {
+    height: 91px;
+    width: 100%;
+    margin: 0;
+    @include flex-center;
+    @include font(34px, 42px, 500);
+
+    &-gray {
+      background-color: $color-gray;
+      color: $color-white;
+    }
+
+    &-green {
+      background-color: $color-green;
+      color: $color-white;
+    }
+  }
+
+  &__email {
+    @include font(34px, 42px, 700);
+    margin: 51px 0 0 0;
+    max-width: 250px;
+  }
+
+  &__text {
+    @include font(30px, 30px, 500);
+    margin: 56px 0 0 0;
+    color: $color-lightgraytext;
+    max-width: 250px;
+    text-align: center;
+  }
+}

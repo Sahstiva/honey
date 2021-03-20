@@ -1,0 +1,149 @@
+.header {
+  background-color: $header-background;
+  padding: 58px 0 98px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    @include breakpoint-600 {
+      justify-content: center;
+    }
+  }
+
+  &__contact {
+    margin: 87px 0 0 0;
+  }
+
+  &__form {
+    padding: 48px 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include breakpoint-600 {
+      align-items: center;
+    }
+
+    &-label {
+      @include font(35px, 32px, 500);
+      color: $color-text;
+
+      @include breakpoint-600 {
+        @include font(24px, 21px, 500);
+      }
+    }
+
+    &-label::after {
+      content: " *";
+      color: $color-red;
+    }
+
+    &-input {
+      // width: 436px;
+      width: 80%;
+      height: 97px;
+      border: 2px solid $color-border;
+      background: transparent;
+      margin: 30px 0 0 0;
+      opacity: 0.28;
+      padding: 0 0 0 32px;
+      margin: 29px 0 82px 0;
+    }
+
+    &-input:active {
+      border: 2px solid $color-active;
+    }
+
+    &-area {
+      // width: 534px;
+      width: 90%;
+      height: 333px;
+      border: 2px solid $color-border;
+      background: transparent;
+      margin: 30px 0 0 0;
+      opacity: 0.28;
+      padding: 0 0 0 32px;
+    }
+
+    &-area:active {
+      border: 2px solid $color-active;
+    }
+
+    &-button {
+      width: 230px;
+      height: 92px;
+      background-color: $color-red;
+      color: $color-white;
+      @include font(26px, 36px, 700);
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__fieldset {
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+
+      @include breakpoint-1024 {
+        flex-direction: column;
+      }
+
+      @include breakpoint-600 {
+        align-items: center;
+      }
+    }
+
+    &-input {
+      border: 0;
+      width: 40%;
+      min-height: 388px;
+      margin: 0;
+      padding: 0 0 110px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include breakpoint-1024 {
+        width: 100%;
+      }
+
+      @include breakpoint-600 {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &-area {
+      border: 0;
+      width: 50%;
+      margin: 0;
+      padding: 0 0 110px 0;
+
+      @include breakpoint-1024 {
+        width: 90%;
+      }
+
+      @include breakpoint-600 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
