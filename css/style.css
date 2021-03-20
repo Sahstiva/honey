@@ -471,6 +471,11 @@ body {
   opacity: 0.28;
   padding: 0 0 0 32px;
   margin: 29px 0 82px 0;
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 400;
+  font-style: normal;
+  color: #767582;
 }
 
 @media (max-width: 1024px) {
@@ -496,6 +501,11 @@ body {
   background: transparent;
   margin: 30px 0 0 0;
   opacity: 0.28;
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 400;
+  font-style: normal;
+  color: #767582;
 }
 
 @media (max-width: 600px) {
@@ -727,9 +737,9 @@ body {
 }
 
 .content__email {
-  font-size: 34px;
-  line-height: 42px;
-  font-weight: 700;
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 500;
   font-style: normal;
   margin: 51px 0 0 0;
   max-width: 250px;
@@ -738,7 +748,7 @@ body {
 .content__text {
   font-size: 30px;
   line-height: 30px;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   margin: 56px 0 0 0;
   color: #767582;
