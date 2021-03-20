@@ -23,6 +23,12 @@
   }
 }
 
+@mixin breakpoint-800 {
+  @media (max-width: $breakpoint-800) {
+    @content;
+  }
+}
+
 @mixin breakpoint-600 {
   @media (max-width: $breakpoint-600) {
     @content;

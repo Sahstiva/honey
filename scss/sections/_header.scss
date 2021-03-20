@@ -49,7 +49,6 @@
     }
 
     &-input {
-      // width: 436px;
       width: 80%;
       height: 97px;
       border: 2px solid $color-border;
@@ -58,6 +57,14 @@
       opacity: 0.28;
       padding: 0 0 0 32px;
       margin: 29px 0 82px 0;
+
+      @include breakpoint-1024 {
+        width: 95%;
+      }
+
+      @include breakpoint-600 {
+        width: 91%;
+      }
     }
 
     &-input:active {
@@ -65,14 +72,16 @@
     }
 
     &-area {
-      // width: 534px;
-      width: 90%;
+      width: 99%;
       height: 333px;
       border: 2px solid $color-border;
       background: transparent;
       margin: 30px 0 0 0;
       opacity: 0.28;
-      padding: 0 0 0 32px;
+
+      @include breakpoint-600 {
+        width: 98%;
+      }
     }
 
     &-area:active {
@@ -136,7 +145,7 @@
       padding: 0 0 110px 0;
 
       @include breakpoint-1024 {
-        width: 90%;
+        width: 100%;
       }
 
       @include breakpoint-600 {
