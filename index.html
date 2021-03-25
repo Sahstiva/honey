@@ -39,6 +39,10 @@
         </div>
         <button type="submit" class="btn btn-danger header__form-button">Записать</button>
         </form>
+        <div class="header__popup" v-if = "popupShow">
+            <p class="header__popup-text">Запись добавлена</p>
+            <button class="btn btn-success header__popup-button" @click="clearForm">ОК</button>
+        </div>
         </div>
     </header>
     <main>
