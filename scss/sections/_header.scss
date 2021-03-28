@@ -6,6 +6,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+  }
+
+  &__popup {
+    position: absolute;
+    background-color: $color-lightgraytext;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-text {
+      color: $color-text;
+      text-align: center;
+      @include font(26px, 36px, 400);
+
+      @include breakpoint-600 {
+        @include font(20px, 24px, 400);
+      }
+    }
+
+    &-button {
+      width: 230px;
+      height: 92px;
+      @include font(26px, 36px, 700);
+
+      @include breakpoint-600 {
+        @include font(20px, 24px, 400);
+        width: 40%;
+        height: 40%;
+      }
+    }
+
+    @include breakpoint-600 {
+      width: 100%;
+      height: 200px;
+      top: 85%;
+    }
   }
 
   &__logo-wrapper {
@@ -57,6 +101,8 @@
       opacity: 0.28;
       padding: 0 0 0 32px;
       margin: 29px 0 82px 0;
+      @include font(30px, 32px, 400);
+      color: $color-lightgraytext;
 
       @include breakpoint-1024 {
         width: 95%;
@@ -67,8 +113,19 @@
       }
     }
 
-    &-input:active {
-      border: 2px solid $color-active;
+    &-invalid:focus {
+      border: 4px solid red;
+    }
+
+    &-invalid {
+      border: 4px solid red;
+    }
+    &-valid:focus {
+      border: 4px solid green;
+    }
+
+    &-valid {
+      border: 4px solid green;
     }
 
     &-area {
@@ -78,6 +135,8 @@
       background: transparent;
       margin: 30px 0 0 0;
       opacity: 0.28;
+      @include font(30px, 32px, 400);
+      color: $color-lightgraytext;
 
       @include breakpoint-600 {
         width: 98%;
@@ -91,13 +150,7 @@
     &-button {
       width: 230px;
       height: 92px;
-      background-color: $color-red;
-      color: $color-white;
       @include font(26px, 36px, 700);
-      border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 
