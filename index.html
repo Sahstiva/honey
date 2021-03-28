@@ -28,9 +28,13 @@
             <div class="header__fieldset-wrapper">
             <div class="mb-3 header__fieldset-input">
                 <label class="form-label header__form-label">Имя</label>
-                <input type="text" class="form-control header__form-input" placeholder="Вася" v-model="userName">
+                <input type="text"  @input="nameValid = patterns.name.test(userName)"
+                                    :class="nameValid?'header__form-valid':'header__form-invalid'"
+                                    class="form-control header__form-input" placeholder="Вася" v-model="userName">
                 <label class="form-label header__form-label">E-mail</label>
-                <input type="email" class="form-control header__form-input" placeholder="name@example.com" v-model="userEmail">
+                <input type="text" @input="emailValid = patterns.email.test(userEmail)"
+                                    :class="emailValid?'header__form-valid':'header__form-invalid'"
+                                    class="form-control header__form-input" placeholder="name@example.com" v-model="userEmail">
             </div>
             <div class="mb-3 header__fieldset-area">
                 <label class="form-label header__form-label">Комментарий</label>
@@ -39,10 +43,12 @@
         </div>
         <button type="submit" class="btn btn-danger header__form-button">Записать</button>
         </form>
-        <div class="header__popup" v-if = "popupShow">
-            <p class="header__popup-text">Запись добавлена</p>
-            <button class="btn btn-success header__popup-button" @click="clearForm">ОК</button>
-        </div>
+        <transition name="fade">
+            <div class="header__popup" v-if = "popupShow">
+                <p class="header__popup-text">{{ popupMessage }}</p>
+                <button class="btn btn-success header__popup-button" @click="clearForm">ОК</button>
+            </div>
+        </transition>
         </div>
     </header>
     <main>

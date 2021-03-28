@@ -85,7 +85,7 @@
       opacity: 0.28;
       padding: 0 0 0 32px;
       margin: 29px 0 82px 0;
-      @include font(30px,32px,400);
+      @include font(30px, 32px, 400);
       color: $color-lightgraytext;
 
       @include breakpoint-1024 {
@@ -97,8 +97,19 @@
       }
     }
 
-    &-input:active {
-      border: 2px solid $color-active;
+    &-invalid:focus {
+      border: 4px solid red;
+    }
+
+    &-invalid {
+      border: 4px solid red;
+    }
+    &-valid:focus {
+      border: 4px solid green;
+    }
+
+    &-valid {
+      border: 4px solid green;
     }
 
     &-area {
@@ -108,7 +119,7 @@
       background: transparent;
       margin: 30px 0 0 0;
       opacity: 0.28;
-      @include font(30px,32px,400);
+      @include font(30px, 32px, 400);
       color: $color-lightgraytext;
 
       @include breakpoint-600 {
