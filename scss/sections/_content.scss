@@ -32,13 +32,13 @@
     @include breakpoint-800 {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+
       align-items: center;
     }
   }
 
   &__item {
-  
     &-gray {
       background-color: $color-lightgray;
       color: $color-graytext;
@@ -93,4 +93,8 @@
 .card {
   max-width: 330px;
   min-height: 407px;
+
+  @include breakpoint-600 {
+    margin-bottom: 50px;
+  }
 }

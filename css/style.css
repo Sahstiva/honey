@@ -441,6 +441,15 @@ body {
   font-style: normal;
 }
 
+@media (max-width: 600px) {
+  .header__popup-text {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
 .header__popup-button {
   width: 230px;
   height: 92px;
@@ -448,6 +457,25 @@ body {
   line-height: 36px;
   font-weight: 700;
   font-style: normal;
+}
+
+@media (max-width: 600px) {
+  .header__popup-button {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__popup {
+    width: 100%;
+    height: 200px;
+    top: 85%;
+  }
 }
 
 .header__logo-wrapper {
@@ -759,9 +787,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -844,6 +872,12 @@ body {
 .card {
   max-width: 330px;
   min-height: 407px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin-bottom: 50px;
+  }
 }
 
 .footer {
