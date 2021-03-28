@@ -23,6 +23,7 @@
 3.	Браузер мобильного устройства
 
 Github pages - https://sahstiva.github.io/honey/
+
 Personal site - https://www.vitshas.me/portfolio/honey/
 
 
